@@ -43,7 +43,7 @@ All the non-LLM models use a ConvNeXt-base image encoder, and we experiment with
 |GPT-4 | BLIP-2 | N/A | 64.5 | 58.0 | 57.3 | 63.2 | 61.6 |
 | GPT-4 | InstructBLIP | N/A | **67.3** | 59.7 | 59.3 | 65.6 | 63.8 |
 | Neuro-Symbolic | InstructBLIP | N/A | 58.3 | 52.2 | 56.4 | 55.2 | 55.5 |
-| <span style="color: gray;">Human</span> | <span style="color: gray;">N/A</span> | <span style="color: gray;">N/A</span> | <span style="color: gray;">**91.7**</span> | <span style="color: gray;">**90.1**</span> | <span style="color: gray;">**89.1**</span> | <span style="color: gray;">**91.7**</span> | <span style="color: gray;">**91.0**</span> |
+| *Human* | *N/A* | *N/A* | *91.7* | *90.1* | *89.1* | *91.7* | *91.0* |
 
 ## Installation
 This codebase can be built from scratch on Ubuntu 20.04 with Python 3.10, PyTorch 1.13 and CUDA 11.7.
