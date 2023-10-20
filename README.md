@@ -8,7 +8,7 @@ This repository hosts the code for our paper:
 
 by [Rujie Wu*](https://joyjayng.github.io/), [Xiaojian Ma*](https://jeasinema.github.io/), [Qing Li](https://liqing-ustc.github.io/), [Wei Wang](https://cognn.com/), [Zhenliang Zhang](https://www.zlz.link/), [Song-Chun Zhu](https://zhusongchun.net/), [Yizhou Wang](https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm)
 
-[🔥Submission guide and leaderboard!](assets/benchmarking_leaderboard.md) | [arXiv](https://arxiv.org/abs/2310.10207) | [Paper](https://arxiv.org/pdf/2310.10207.pdf) | [Project page](https://joyjayng.github.io/Bongard-OpenWorld.github.io/) | [Dataset](https://huggingface.co/datasets/joyjay/Bongard-OpenWorld)
+[🔥 Leaderboard and submission guide!](assets/benchmarking_leaderboard.md) | [arXiv](https://arxiv.org/abs/2310.10207) | [Paper](https://arxiv.org/pdf/2310.10207.pdf) | [Project page](https://joyjayng.github.io/Bongard-OpenWorld.github.io/) | [Dataset](https://huggingface.co/datasets/joyjay/Bongard-OpenWorld)
 
 ## News
 - 10/20/2023: 🎉🎉 [Leaderboard](https://paperswithcode.com/sota/visual-reasoning-on-bongard-openworld) has been launched.
