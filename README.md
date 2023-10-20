@@ -11,9 +11,9 @@ by [Rujie Wu*](https://joyjayng.github.io/), [Xiaojian Ma*](https://jeasinema.gi
 [🔥Submission guide and leaderboard!](assets/benchmarking_leaderboard.md) | [arXiv](https://arxiv.org/abs/2310.10207) | [Paper](https://arxiv.org/pdf/2310.10207.pdf) | [Project page](https://joyjayng.github.io/Bongard-OpenWorld.github.io/) | [Dataset](https://huggingface.co/datasets/joyjay/Bongard-OpenWorld)
 
 ## News
-- 10/20/2023: 🎉🎉 [Leaderboard](https://paperswithcode.com/sota/visual-reasoning-on-bongard-openworld) is launched.
+- 10/20/2023: 🎉🎉 [Leaderboard](https://paperswithcode.com/sota/visual-reasoning-on-bongard-openworld) has been launched.
 - 10/20/2023: 🎉🎉 [Code](https://github.com/joyjayng/Bongard-OpenWorld) and [Dataset](https://huggingface.co/datasets/joyjay/Bongard-OpenWorld) have been released.
-- 10/18/2023: 🎉🎉 Official [Project Page](https://joyjayng.github.io/Bongard-OpenWorld.github.io/) is launched.
+- 10/18/2023: 🎉🎉 Official [Project Page](https://joyjayng.github.io/Bongard-OpenWorld.github.io/) has been launched.
 - 10/16/2023: 🎉🎉 [ArXiv](https://arxiv.org/abs/2310.10207) preprint has been submitted.
 
 ## Abstract
