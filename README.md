@@ -1,6 +1,6 @@
 Bongard-OpenWorld
 ===
-<p align="center"><img width="720" src="assets/teaser.jpg"></p>
+<p align="center"><img width="720" src="assets/illustrations/teaser.jpg"></p>
 
 This repository hosts the code for our paper:
 
@@ -11,15 +11,16 @@ by [Rujie Wu*](https://joyjayng.github.io/), [Xiaojian Ma*](https://jeasinema.gi
 [🔥Submission guide and leaderboard!](assets/benchmarking_leaderboard.md) | [arXiv](https://arxiv.org/abs/2310.10207) | [Paper](https://arxiv.org/pdf/2310.10207.pdf) | [Project page](https://joyjayng.github.io/Bongard-OpenWorld.github.io/) | [Dataset](https://huggingface.co/datasets/joyjay/Bongard-OpenWorld)
 
 ## News
+- 10/20/2023: 🎉🎉 [Leaderboard](https://paperswithcode.com/sota/visual-reasoning-on-bongard-openworld) is launched.
 - 10/20/2023: 🎉🎉 [Code](https://github.com/joyjayng/Bongard-OpenWorld) and [Dataset](https://huggingface.co/datasets/joyjay/Bongard-OpenWorld) have been released.
-- 10/18/2023: 🎉🎉 Official [Project Page](https://joyjayng.github.io/Bongard-OpenWorld.github.io/) is launched!
-- 10/16/2023: 🎉🎉 Bongard-OpenWorld [arXiv](https://arxiv.org/abs/2310.10207) preprint has been submitted.
+- 10/18/2023: 🎉🎉 Official [Project Page](https://joyjayng.github.io/Bongard-OpenWorld.github.io/) is launched.
+- 10/16/2023: 🎉🎉 [ArXiv](https://arxiv.org/abs/2310.10207) preprint has been submitted.
 
 ## Abstract
 We introduce **Bongard-OpenWorld**, a new benchmark for evaluating real-world few-shot reasoning for machine vision. It originates from the classical *Bongard Problems (BPs)* : Given two sets of images (positive and negative), the model needs to identify the set that query images belong to by inducing the visual concepts, which is exclusively depicted by images from the positive set. Our benchmark inherits the few-shot concept induction of the original BPs while adding the two novel layers of challenge: 1) open-world free-form concepts, as the visual concepts in Bongard-OpenWorld are unique compositions of terms from an open vocabulary, ranging from object categories to abstract visual attributes and commonsense factual knowledge; 2) real-world images, as opposed to the synthetic diagrams used by many counterparts. In our exploration, Bongard-OpenWorld already imposes a significant challenge to current few-shot reasoning algorithms. We further investigate to which extent the recently introduced Large Language Models (LLMs) and Vision-Language Models (VLMs) can solve our task, by directly probing VLMs, and combining VLMs and LLMs in an interactive reasoning scheme. We even designed a neuro-symbolic reasoning approach that reconciles LLMs & VLMs with logical reasoning to emulate the human problem-solving process for Bongard Problems. However, none of these approaches manage to close the human-machine gap, as the best learner achieves 64% accuracy while human participants easily reach 91%. We hope Bongard-OpenWorld can help us better understand the limitations of current visual intelligence and facilitate future research on visual agents with stronger few-shot visual reasoning capabilities.
 
 ## Approaches
-<p align="center"><img width="720" src="assets/method.jpg"></p>
+<p align="center"><img width="720" src="assets/illustrations/method.jpg"></p>
 
 We explore four families of approaches: (a) casting Bongard-OpenWorld into a standard ''2-way, 6-shot'' few-shot learning problem and tackling it using state-of-the-art few-shot learners with pretrained image representations; (b) Combining an LLM (reasoner) and a VLM (image captioner) in a single round fashion, where the VLM simply caption each Bongard image and send their captions to LLM for solving this problem; (c) extending the method in (b) to multiple rounds, where the LLM will also iteratively prob the VLM for more image details, resulting in more condense information for solving Bongard; (d) A neuro-symbolic approach, where a VLM generates the initial captions, then an LLM extracts visual concepts from them. These concepts are subsequently updated through logical operations, leveraging the responses provided by VLM, until the problem is solved.
 
@@ -42,7 +43,7 @@ All the non-LLM models use a ConvNeXt-base image encoder, and we experiment with
 |GPT-4 | BLIP-2 | N/A | 64.5 | 58.0 | 57.3 | 63.2 | 61.6 |
 | GPT-4 | InstructBLIP | N/A | **67.3** | 59.7 | 59.3 | 65.6 | 63.8 |
 | Neuro-Symbolic | InstructBLIP | N/A | 58.3 | 52.2 | 56.4 | 55.2 | 55.5 |
-| <font color=Gray>Human</font> | <font color=Gray>N/A</font> | <font color=Gray>N/A</font> | <font color=Gray>**91.7**</font> | <font color=Gray>**90.1**</font> | <font color=Gray>**89.1**</font> | <font color=Gray>**91.7**</font> | <font color=Gray>**91.0**</font> |
+| <span style="color: gray;">Human</span> | <span style="color: gray;">N/A</span> | <span style="color: gray;">N/A</span> | <span style="color: gray;">**91.7**</span> | <span style="color: gray;">**90.1**</span> | <span style="color: gray;">**89.1**</span> | <span style="color: gray;">**91.7**</span> | <span style="color: gray;">**91.0**</span> |
 
 ## Installation
 This codebase can be built from scratch on Ubuntu 20.04 with Python 3.10, PyTorch 1.13 and CUDA 11.7.
