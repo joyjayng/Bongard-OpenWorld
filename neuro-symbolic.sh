@@ -1,0 +1,5 @@
+# neuro-symbolic + ChatGPT
+python scripts/instructBLIP_gpt4_concepts.py
+python scripts/instructBLIP_gpt4_concepts_query.py
+python scripts/instructBLIP_gpt4_concepts_reasoning.py
+python scripts/eval_instructBLIP_gpt4_concepts_reasoning.py

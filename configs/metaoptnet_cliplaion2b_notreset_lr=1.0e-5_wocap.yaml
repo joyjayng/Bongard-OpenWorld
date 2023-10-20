@@ -1,0 +1,121 @@
+exp_name: metaoptnet_cliplaion2b_notreset_lr=1.0e-5_wocap
+
+train_dataset: bongard-ow
+train_dataset_args:
+  im_root: assets/data/bongard-ow
+  problem_file: assets/data/bongard-ow/bongard_ow_train.json
+  bbox_file: assets/data/bongard-ow/bbox_data.pkl
+  basic_augmentation: False
+  extra_augmentation: True
+  resize_224: True
+  use_clip_stat: True
+
+val_dataset: bongard-ow
+val_dataset_args:
+  im_root: assets/data/bongard-ow
+  problem_file: assets/data/bongard-ow/bongard_ow_val.json
+  bbox_file: assets/data/bongard-ow/bbox_data.pkl
+  basic_augmentation: False
+  extra_augmentation: False
+  resize_224: True
+  use_clip_stat: True
+
+test_dataset: bongard-ow
+test_dataset_args:
+  im_root: assets/data/bongard-ow
+  problem_file: assets/data/bongard-ow/bongard_ow_test.json
+  bbox_file: assets/data/bongard-ow/bbox_data.pkl
+  basic_augmentation: False
+  extra_augmentation: False
+  resize_224: True
+  use_clip_stat: True
+
+image_encoder: convnext_base_laion2b
+image_encoder_output_dim: 1024
+image_encoder_args:
+  pretrained: True
+  reset_clip_s2b2: False
+
+relational_encoder:
+
+caption_head_name:
+caption_head_args:
+  input_feat_dim: -1
+  lm_name: facebook/opt-125m
+  freeze_lm: True
+  max_length: 500
+  num_prefix_token: 32
+  image_embed_dropout_prob: 0.0
+  use_beam: True
+  num_beams: 4
+  max_sample_length: 32
+  use_qformer: True
+  pretrained_qformer: True
+  freeze_qformer: False
+  pretrained_query: True
+  freeze_query: False
+  use_unpooled: True
+
+# # meta-baseline
+# few_shot_head: meta_baseline
+# few_shot_head_args:
+#   method: cos
+
+# # protonet
+# few_shot_head: metaoptnet
+# few_shot_head_args:
+#   head: ProtoNet
+#   normalize: False
+#   # normalize: True
+
+# metaoptnet
+few_shot_head: metaoptnet
+few_shot_head_args:
+  head: SVM
+  normalize: False
+
+# # snail
+# few_shot_head: snail
+# few_shot_head_args:
+#   n_way: 2
+#   n_shot: 6
+#   input_feat_dim: -1
+#   dynamic_k: False
+
+# # wren
+# few_shot_head: wren
+# few_shot_head_args:
+#   n_shot: 6
+#   input_feat_dim: -1
+#   method: original
+
+optimizer_name: adamw
+optimizer_args:
+  lr: 1.0e-4
+  weight_decay: 5.e-4
+  scheduler: warmup_cosine
+  warmup_epochs: 5
+  max_epochs: 20
+  warmup_start_lr: 0
+
+additional_args:
+  image_encoder_lr: 1.0e-5
+
+bongard_args:
+  n_way: 2
+  n_shot: 6
+  n_query: 2
+
+# misc
+seed: 42
+max_epoch: 20
+batch_size: 10
+num_dataset_workers: 4
+
+freeze_image_encoder: False
+caption_loss_coeff: 0.1
+ckpt_path:
+devices: 1
+precision: 32
+accelerator: gpu
+strategy: ddp_find_unused_parameters_true
