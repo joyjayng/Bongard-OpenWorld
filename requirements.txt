@@ -10,6 +10,7 @@ pytorch_lightning
 websockets
 opencv-python
 wandb
+chardet
 cvxpy
 transformers
 pycocoevalcap
